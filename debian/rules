@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/maven.mk
+
+JAVA_HOME := /usr/lib/jvm/default-java
+#DEB_MAVEN_DOC_TARGET := javadoc:jar javadoc:aggregate
+DEB_INSTALL_CHANGELOGS_ALL := CHANGE.txt
+
+install/libjrosetta-java::
+	ln -s jrosetta-api.jar debian/libjrosetta-java/usr/share/java/jrosetta-API.jar
+
+
+get-orig-source:
+	uscan --download-version $(DEB_UPSTREAM_VERSION) --force-download --rename

@@ -1,0 +1,259 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- =========================================================== -->
+	<!-- POM relationships -->
+	<!-- =========================================================== -->
+
+	<!-- Maven coordinates -->
+	<groupId>com.artenum</groupId>
+	<artifactId>jrosetta</artifactId>
+	<version>1.0.4</version>
+
+	<!-- Dependency management for children POM -->
+	<dependencyManagement></dependencyManagement>
+
+	<!-- Dependencies -->
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<!-- Multi-modules definition -->
+	<modules>
+		<module>modules/jrosetta-api</module>
+		<module>modules/jrosetta-engine</module>
+	</modules>
+
+	<!-- =========================================================== -->
+	<!-- General project information -->
+	<!-- =========================================================== -->
+
+	<!-- General project information -->
+	<name>JRosetta</name>
+	<description>
+        JRosetta provides a common base for graphical components that could be used to build a graphical console in Swing
+    </description>
+	<url>http://dev.artenum.com/projects/JRosetta</url>
+
+	<organization>
+		<name>Artenum</name>
+		<url>http://www.artenum.com</url>
+	</organization>
+	<inceptionYear>2007</inceptionYear>
+
+	<!-- Project licenses -->
+	<licenses>
+		<license>
+			<name>General Public License (GPL)</name>
+			<url>http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<!-- Development team -->
+	<developers>
+		<developer>
+			<name>Benoît Thiébault</name>
+			<id>thiebault</id>
+			<email>thiebault AT artenum.com</email>
+			<organization>Artenum</organization>
+			<organizationUrl>http://www.artenum.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Sébastien Jourdain</name>
+			<id>jourdain</id>
+			<organization>Artenum</organization>
+			<organizationUrl>http://www.artenum.com</organizationUrl>
+		</developer>
+	</developers>
+
+	<!-- External contributors -->
+	<contributors>
+		<contributor>
+			<name>Silvestre Ledru</name>
+			<email>sylvestre.ledru AT scilab.org</email>
+			<organization>Scilab</organization>
+			<organizationUrl>http://www.scilab.org</organizationUrl>
+		</contributor>
+		<contributor>
+			<name>Calixte Denizet</name>
+			<organization>Scilab</organization>
+			<organizationUrl>http://www.scilab.org</organizationUrl>
+		</contributor>
+	</contributors>
+
+	<!-- =========================================================== -->
+	<!-- Build settings -->
+	<!-- =========================================================== -->
+
+	<!-- Packaging -->
+	<packaging>pom</packaging>
+
+	<!-- Properties -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<!-- Build -->
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
+				<version>1.0-beta-7</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<!-- Force the use of a given version of Java -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<!-- Writes extra information in the MANIFEST -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+						</manifest>
+						<manifestEntries>
+							<License>General Public License (GPL) V2</License>
+							<Copyright>Artenum - http://www.artenum.com</Copyright>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<!-- Builds Maven site -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<reportPlugins>
+						<!-- Generates the index.html files -->
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-project-info-reports-plugin</artifactId>
+							<version>2.2</version>
+						</plugin>
+						<!-- Generate Javadoc -->
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-javadoc-plugin</artifactId>
+							<version>2.7</version>
+						</plugin>
+						<!-- Generates the changes reports -->
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-changes-plugin</artifactId>
+							<version>2.3</version>
+							<reportSets>
+								<reportSet>
+									<reports>
+										<report>changes-report</report>
+									</reports>
+								</reportSet>
+							</reportSets>
+						</plugin>
+						<!-- Generate cross reference source code -->
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-jxr-plugin</artifactId>
+							<version>2.2</version>
+						</plugin>
+					</reportPlugins>
+				</configuration>
+			</plugin>
+			<!-- Creation assemblies for distribution -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>sources</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>src/main/assembly/sources.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!-- =========================================================== -->
+	<!-- Build environment -->
+	<!-- =========================================================== -->
+
+	<!-- Development environment information -->
+	<scm>
+		<developerConnection>scm:svn:http://dev.artenum.com/ls-svn/JRosetta/trunk</developerConnection>
+	</scm>
+
+	<ciManagement>
+		<system>hudson</system>
+		<url>http://hudson.artenum.com/</url>
+	</ciManagement>
+
+	<issueManagement>
+		<url>http://dev.artenum.com/projects/JRosetta/tracker</url>
+	</issueManagement>
+
+	<!-- Maven version prerequisite -->
+	<prerequisites>
+		<maven>2.2.1</maven>
+	</prerequisites>
+
+	<!-- Artifacts repositories -->
+	<repositories>
+		<repository>
+			<id>Artenum</id>
+			<name>Artenum public repository</name>
+			<url>http://maven.artenum.com/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<!-- Plugin repositories -->
+	<pluginRepositories></pluginRepositories>
+
+	<!-- Distribution management -->
+	<distributionManagement>
+		<site>
+			<id>jrosetta.website</id>
+			<name>JRosetta Maven site</name>
+			<url>dav:http://dev.artenum.com/ls-svn/JRosetta/site</url>
+		</site>
+		<repository>
+			<id>maven.artenum.com</id>
+			<url>http://maven.artenum.com/content/repositories/releases-public/</url>
+		</repository>
+		<snapshotRepository>
+			<id>maven.artenum.com</id>
+			<uniqueVersion>false</uniqueVersion>
+			<url>http://maven.artenum.com/content/repositories/snapshots-public/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<!-- Maven profiles -->
+	<profiles></profiles>
+
+</project>

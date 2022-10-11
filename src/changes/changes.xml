@@ -1,0 +1,56 @@
+<document>
+	<properties>
+		<title>JRosetta engine changelog</title>
+		<author email="thiebault at artenum dot com">
+			Benoît Thiébault
+		</author>
+	</properties>
+	<body>
+		<release version="1.0.4" date="2011-10-3" description="JRosetta 1.0.4">
+			<action dev="Sylvestre Ledru - Scilab" type="update">
+				Introduce member VERSION in com.artenum.rosetta.util.ConfigurationBuilder
+			</action>
+		</release>
+		<release version="1.0.3" date="2011-09-16" description="JRosetta 1.0.3">
+			<action dev="Calixte Denizet - Scilab" type="bug">
+				Fix a bug in the refresh of the display
+			</action>
+			<action dev="thiebault" type="update">
+				Migration to Maven
+			</action>
+			<action dev="thiebault" type="update">
+				Changed license to GPL
+			</action>
+		</release>
+		<release version="1.0.2" date="2009-01-13" description="JRosetta 1.0.2">
+			<action dev="jourdain" type="fix">
+				Fix svn version with double license
+			</action>
+			<action dev="jourdain" type="fix">
+				Fix packaging for fedora integration
+			</action>
+		</release>
+		<release version="1.0.1" date="2007-12-12" description="JRosetta 1.0.1">
+			<action dev="Sylvestre Ledru" type="update">
+				Ant target renamed from make-Console => make-Engine
+			</action>
+			<action dev="Sylvestre Ledru" type="update">
+				Jar file name changed (JRosetta-1.0.jar => jrosetta-engine.jar and JRosetta-API-1.0.jar => jrosetta-API.jar)
+			</action>
+			<action dev="Sylvestre Ledru" type="update">
+				CHANGE.txt format changed
+			</action>
+		</release>
+		<release version="1.0.0" date="2007-12-10" description="JRosetta 1.0.0">
+			<action dev="jourdain" type="add">
+				Advanced generic configuration manager
+			</action>
+			<action dev="jourdain" type="add">
+				Basic UI implementation
+			</action>
+			<action dev="jourdain" type="add">
+				Generic API definition
+			</action>
+		</release>
+	</body>
+</document>

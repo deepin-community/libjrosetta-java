@@ -1,0 +1,43 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- =========================================================== -->
+	<!-- POM relationships -->
+	<!-- =========================================================== -->
+
+	<!-- Maven coordinates -->
+	<groupId>com.artenum.jrosetta</groupId>
+	<artifactId>jrosetta-api</artifactId>
+
+	<!-- POM inheritence -->
+	<parent>
+		<groupId>com.artenum</groupId>
+		<artifactId>jrosetta</artifactId>
+		<version>1.0.4</version>
+		<relativePath>../..</relativePath>
+	</parent>
+
+	<!-- Dependencies -->
+	<dependencies></dependencies>
+
+	<!-- =========================================================== -->
+	<!-- General project information -->
+	<!-- =========================================================== -->
+
+	<!-- General project information -->
+	<name>JRosetta API</name>
+	<description>
+        API of the JRosetta console
+    </description>
+	<url>http://dev.artenum.com/projects/JRosetta</url>
+
+	<!-- =========================================================== -->
+	<!-- Build settings -->
+	<!-- =========================================================== -->
+
+	<!-- Packaging -->
+	<packaging>jar</packaging>
+
+</project>

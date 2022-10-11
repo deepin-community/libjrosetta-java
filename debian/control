@@ -1,0 +1,39 @@
+Source: libjrosetta-java
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Sylvestre Ledru <sylvestre@debian.org>,
+ Torsten Werner <twerner@debian.org>
+Build-Depends: debhelper (>= 7), cdbs, default-jdk, maven-debian-helper (>= 1.5)
+Build-Depends-Indep: junit4
+# default-jdk-doc, libmaven-javadoc-plugin-java 
+Standards-Version: 3.9.3
+Homepage: http://dev.artenum.com/projects/JRosetta/
+Vcs-Svn: svn+ssh://svn.debian.org/svn/pkg-java/trunk/libjrosetta-java
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-java/trunk/libjrosetta-java/
+
+Package: libjrosetta-java
+Architecture: all
+Depends: ${misc:Depends}, ${maven:Depends}
+Recommends: ${maven:OptionalDepends}
+#Suggests: libjrosetta-java-doc
+Description: JRosetta - Advanced graphical console engine
+ JRosetta provides a common base for graphical component that could be used to
+ build a graphical console in Swing with the latest requirements, such as
+ command history, completion and so on for instance for scripting language
+ or command line.
+
+
+# Package: libjrosetta-java-doc
+# Architecture: all
+# Section: doc
+# Depends: ${misc:Depends}, ${maven:DocDepends}
+# Recommends: ${maven:DocOptionalDepends}
+# Suggests: libjrosetta-java
+# Description: Documentation for JRosetta
+#  JRosetta provides a common base for graphical component that could be used to
+#  build a graphical console in Swing with the latest requirements, such as
+#  command history, completion and so on for instance for scripting language
+#  or command line.
+#  .
+#  This package contains the API documentation of libjrosetta-java.

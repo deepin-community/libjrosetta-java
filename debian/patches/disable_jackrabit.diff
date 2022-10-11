@@ -1,0 +1,18 @@
+Index: jrosetta-1.0.4/pom.xml
+===================================================================
+--- jrosetta-1.0.4.orig/pom.xml	2011-10-10 21:31:52.000000000 +0200
++++ jrosetta-1.0.4/pom.xml	2011-10-10 21:31:58.000000000 +0200
+@@ -102,13 +102,6 @@
+ 
+ 	<!-- Build -->
+ 	<build>
+-		<extensions>
+-			<extension>
+-				<groupId>org.apache.maven.wagon</groupId>
+-				<artifactId>wagon-webdav-jackrabbit</artifactId>
+-				<version>1.0-beta-7</version>
+-			</extension>
+-		</extensions>
+ 		<plugins>
+ 			<!-- Force the use of a given version of Java -->
+ 			<plugin>

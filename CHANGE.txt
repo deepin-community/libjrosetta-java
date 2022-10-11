@@ -1,0 +1,32 @@
+JRosetta (1.0.4)
+
+  * Introduce member VERSION in com.artenum.rosetta.util.ConfigurationBuilder
+
+ -- Sylvestre Ledru <sylvestre.ledru@scilab.org>  Fri, 3 Oct 2011 14:04:52 +0200
+
+JRosetta (1.0.3)
+
+  [ Calixte Denizet - Scilab ]
+  * Fix a bug in the refresh of the display
+
+  [ Benoit Thiebault - Artenum ]
+  * Switch to maven
+
+ -- Sylvestre Ledru <sylvestre.ledru@scilab.org>  Fri, 16 Sep 2011 17:04:52 +0200
+
+JRosetta (1.0.2)
+  * Fix svn version with double license
+  * Fix packaging for fedora integration
+ -- Sebastien Jourdain <jourdain@artenum.com>  Tue, 13 Jan 2009 18:20:00 +0100
+ 
+JRosetta (1.0.1)
+  * Ant target renamed from make-Console => make-Engine
+  * Jar file name changed (JRosetta-1.0.jar => jrosetta-engine.jar and JRosetta-API-1.0.jar => jrosetta-API.jar)
+  * CHANGE.txt format changed
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Wed, 12 Dec 2007 11:45:08 +0100
+
+JRosetta (1.0)
+  * Advanced generic configuration manager
+  * Generic API definition
+  * Basic UI implementation
+ -- Sebastien Jourdain <jourdain@artenum.com>  Mon, 10 Dec 2007 11:45:08 +0100

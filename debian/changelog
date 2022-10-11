@@ -1,0 +1,110 @@
+libjrosetta-java (1.0.4-4.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 13:54:09 +0100
+
+libjrosetta-java (1.0.4-4) unstable; urgency=high
+
+  * Bring back the file jrosetta-API.jar (Closes: #667602)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 08 Apr 2012 17:31:24 +0200
+
+libjrosetta-java (1.0.4-3) unstable; urgency=low
+
+  * Bring back the library (deleted from /usr/share/java/).
+  maven-debian-helper changed it behaviour
+  * Get ride of deprecated file (ant.properties)
+  * Some useless build dependencies removed (jdom1, slf4j)
+  
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 25 Mar 2012 19:41:16 +0200
+
+libjrosetta-java (1.0.4-2) unstable; urgency=low
+
+  * Update Standards-Version: 3.9.3
+  * Fix a FTBFS (wrong name of the java lib)
+  
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 23 Mar 2012 00:20:03 +0100
+
+libjrosetta-java (1.0.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Update Standards-Version: 3.9.2
+  * Update of the watch file + repack script
+  * Fix FTBFS (Closes: #643534)
+  * Switch to maven (upstream)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Mon, 10 Oct 2011 23:52:06 +0200
+
+libjrosetta-java (1.0.2+gpl-4) unstable; urgency=low
+
+  * Switch to debhelper level 7.
+  * Update Standards-Version: 3.9.1.
+  * Remove Java runtime from Depends.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 29 Aug 2011 23:28:27 +0200
+
+libjrosetta-java (1.0.2+gpl-3) unstable; urgency=low
+
+  * Change of my email address since I am now DD 
+  * Standards-Version updated to 3.8.3
+  * DM-Upload-Allowed removed
+  * openjdk-6-jdk => default-jdk
+
+  [ Torsten Werner ]
+  * Fix Vcs headers.
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 27 Nov 2009 10:29:45 +0100
+
+libjrosetta-java (1.0.2+gpl-2) unstable; urgency=low
+
+  * Change Maintainer: Debian Java Maintainers.
+  * Update Standards-Version: 3.8.2 (no changes).
+  * Change Section: java.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 29 Jun 2009 20:17:36 +0200
+
+libjrosetta-java (1.0.2+gpl-1) unstable; urgency=low
+
+  * New upstream version
+  * Minor updates in the repack script
+  * Built using openjdk instead of gcj
+
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Wed, 21 Jan 2009 15:54:27 +0100
+
+libjrosetta-java (1.0.1+gpl-2) unstable; urgency=low
+
+  * misc depends added
+
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Tue, 30 Dec 2008 11:42:14 +0100
+
+libjrosetta-java (1.0.1+gpl-1) unstable; urgency=low
+
+  [ Sylvestre Ledru ]
+  * Jrosetta is now free (GPL v2)
+  * Update of watch, control, copyright and orig-tar.sh to reflect the licence 
+    change.
+  * Standards-Version changed to version 3.8.0
+
+  [ Torsten Werner ]
+  * Add +gpl to upstream version number to allow uploading a new upstream
+    tarball.
+  * Make debian/copyright more verbose.
+
+ -- Torsten Werner <twerner@debian.org>  Wed, 16 Jul 2008 15:35:36 +0200
+
+libjrosetta-java (1.0.1-2) unstable; urgency=low
+
+  * Add DM-Upload-Allowed: yes to enable uploads by Sylvestre.
+  * Fix debian/watch to download the QPL source code (there is a GPL version,
+    too).
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 29 Apr 2008 20:33:03 +0200
+
+libjrosetta-java (1.0.1-1) unstable; urgency=low
+
+  * Initial Release (Closes: #458097)
+
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Wed, 12 Dec 2007 11:45:08 +0100
+

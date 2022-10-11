@@ -1,0 +1,6 @@
+version=3
+# uversionmangle is used to convert 1-0-1 to 1.0.1
+# downloadurlmangle is used to add the action download at the end of the URL
+# filenamemangle is used to download a more explict filename (would be src instead...). This option is not mandatory
+http://dev.artenum.com/projects/JRosetta/download .*jrosetta-(.*)-sources.jar \
+  debian debian/orig-tar.sh
